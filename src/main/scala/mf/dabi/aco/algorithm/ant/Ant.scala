@@ -23,7 +23,6 @@ case class Ant(now: Int,
       val nrest: RIndex = rest.filterNot(_ == nx)
       val nvisited: RIndex = nx +: visited
       update(nx)
-      //      println(s"nueva hormiga ($nx) Rest = ${nrest.mkString(", ")} Visitados = ${nvisited.mkString(", ")}")
       Ant(nx, nrest, nvisited, dph).go
     }
   }

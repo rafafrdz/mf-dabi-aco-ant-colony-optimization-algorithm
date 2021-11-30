@@ -12,7 +12,8 @@ object RandomExample {
     val result = algorithm(sp, colonySize, iterJourney)
 
     /** best = true -> show only best path in plot; else plot all paths */
-    result.show(path = s"src/main/resources/plot/random/$randomName")
+    result.show(true, path = s"src/main/resources/plot/random/$randomName")
+    result.show(false, path = s"src/main/resources/plot/random/$randomName")
   }
 
   /** Since graph-plot library is still developing, the plotting method is experimental
